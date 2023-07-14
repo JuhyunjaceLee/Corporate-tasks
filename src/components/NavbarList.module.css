@@ -1,0 +1,29 @@
+* {
+  font-size: 14px;
+}
+.menu_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 20px 10px;
+}
+.menu_icon {
+  transform: rotate(180deg);
+}
+.subTitle_wrap_active {
+  display: none;
+}
+.subTitle_list {
+  cursor: pointer;
+}
+.subTitle_list_active {
+  background-color: var(--color-active-gray);
+}
+.subTitle_list:hover {
+  background-color: var(--color-hover-gray);
+}
+.subTitle_list_txt {
+  padding: 10px 30px;
+}
