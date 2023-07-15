@@ -1,7 +1,6 @@
 .contents {
   width: 256px;
   height: 100vh;
-  /* padding: 20px; */
   border-right: 2px solid var(--color-active-gray);
   background-color: #fbfbfc;
 }

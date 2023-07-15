@@ -12,7 +12,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
 button {
   border: none;
   background-color: none;
@@ -26,4 +31,8 @@ input {
 
 ul {
   list-style: none;
+}
+
+.App {
+  display: flex;
 }

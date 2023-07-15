@@ -1,29 +1,20 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Homepage.module.css";
-import Navbar from "../components/Navbar";
+import styles from "./SubTitlePageCommon.module.css";
 import SaveBtn from "../components/SaveBtn";
 
 export default function Homepage() {
   const [data, setData] = useState();
   const url = `https://api-jobtest.json2bot.chat`;
 
-  // const getData = () => {
-  //   fetch(url).then((response) => {
-  //     return response.json();
-  //   });
-  //   console.log(response);
-  // };
-
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => alert(error.message));
-    console.log(data);
+    // console.log(data);
   }, []);
   return (
     <div className={styles.contents}>
-      <Navbar />
       <div className={styles.section}>
         <h1 className={styles.home_title}>타이틀</h1>
         <div className={styles.home_main_info}>

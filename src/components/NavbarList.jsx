@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./NavbarList.module.css";
 import { RxTriangleUp } from "react-icons/rx";
 
@@ -32,7 +33,9 @@ export default function NavbarList({ title, list, selected, selectedHandle }) {
               key={sub.id}
               onClick={() => subTitleHandler(sub.id)}
             >
-              <p className={styles.subTitle_list_txt}>{sub.subTitle}</p>
+              <Link to={`${sub.path}`}>
+                <p className={styles.subTitle_list_txt}>{sub.subTitle}</p>
+              </Link>
             </li>
           );
         })}
