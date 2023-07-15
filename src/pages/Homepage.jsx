@@ -19,6 +19,7 @@ export default function Homepage() {
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => alert(error.message));
+    console.log(data);
   }, []);
   return (
     <div className={styles.contents}>

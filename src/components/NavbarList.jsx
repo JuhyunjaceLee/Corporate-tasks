@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./NavbarList.module.css";
 import { RxTriangleUp } from "react-icons/rx";
 
-export default function NavbarList({ title, list }) {
+export default function NavbarList({ title, list, selected, selectedHandle }) {
   const [toggle, setToggle] = useState(false);
-  const [selected, setSelected] = useState("");
   const toggleMenuHandler = () => {
     setToggle(!toggle);
   };
   const subTitleHandler = (id) => {
-    setSelected(id);
+    selectedHandle(id);
   };
-
   return (
     <>
       <div className={styles.menu_wrap} onClick={toggleMenuHandler}>
@@ -27,7 +25,7 @@ export default function NavbarList({ title, list }) {
           return (
             <li
               className={
-                selected == sub.id
+                selected === sub.id
                   ? `${styles.subTitle_list_active}`
                   : `${styles.subTitle_list}`
               }
