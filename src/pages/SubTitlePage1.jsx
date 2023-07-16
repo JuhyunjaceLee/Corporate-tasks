@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./SubTitlePageCommon.module.css";
 import SaveBtn from "../components/SaveBtn";
+import Calendar from "../components/Calendar";
 
 export default function Homepage() {
   const [data, setData] = useState();
@@ -42,10 +43,11 @@ export default function Homepage() {
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>날짜</p>
-            <input
+            {/* <input
               className={`${styles.info_contents} ${styles.info_input}`}
               type="text"
-            ></input>
+            ></input> */}
+            <Calendar />
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보5</p>
