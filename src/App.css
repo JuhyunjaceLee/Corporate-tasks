@@ -36,3 +36,9 @@ ul {
 .App {
   display: flex;
 }
+
+/* calendar */
+.react-datepicker__input-container {
+  display: flex !important;
+  align-items: center !important;
+}
