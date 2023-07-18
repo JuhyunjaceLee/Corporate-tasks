@@ -9,17 +9,17 @@ export default function Navbar() {
   };
   const menu = [
     {
-      title: "대메뉴1",
+      title: "대메뉴",
       list: [
-        { subTitle: "소메뉴1", id: 1, path: "/" },
-        { subTitle: "소메뉴2", id: 2, path: "/sub2" },
+        { subTitle: "소메뉴", id: 1, path: "/" },
+        { subTitle: "소메뉴", id: 2, path: "/sub2" },
       ],
     },
     {
-      title: "대메뉴2",
+      title: "대메뉴",
       list: [
-        { subTitle: "소메뉴3", id: 3, path: "/sub3" },
-        { subTitle: "소메뉴4", id: 4, path: "/sub4" },
+        { subTitle: "소메뉴", id: 3, path: "/sub3" },
+        { subTitle: "소메뉴", id: 4, path: "/sub4" },
       ],
     },
   ];

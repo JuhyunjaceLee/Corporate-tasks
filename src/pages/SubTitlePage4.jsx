@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./SubTitlePageCommon.module.css";
 import SaveBtn from "../components/SaveBtn";
+import Calendar from "../components/Calendar";
+import RadioBtn from "../components/RadioBtn";
 
 export default function Homepage() {
   const [data, setData] = useState();
@@ -11,7 +13,7 @@ export default function Homepage() {
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => alert(error.message));
-    console.log(data);
+    // console.log(data);
   }, []);
   return (
     <div className={styles.contents}>
@@ -42,16 +44,20 @@ export default function Homepage() {
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>날짜</p>
-            <input
+            {/* <input
               className={`${styles.info_contents} ${styles.info_input}`}
               type="text"
-            ></input>
+            ></input> */}
+            <Calendar />
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보5</p>
+            <RadioBtn btnStyle="btn_1" />
+            {/* props로 className을 넘겨준다. */}
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보6</p>
+            <RadioBtn btnStyle="btn_2" />
           </div>
         </div>
         <SaveBtn />

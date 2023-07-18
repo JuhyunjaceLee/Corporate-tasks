@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./SubTitlePageCommon.module.css";
 import SaveBtn from "../components/SaveBtn";
 import Calendar from "../components/Calendar";
+import RadioBtn from "../components/RadioBtn";
 
 export default function Homepage() {
   const [data, setData] = useState();
@@ -51,9 +52,12 @@ export default function Homepage() {
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보5</p>
+            <RadioBtn btnStyle="btn_1" />
+            {/* props로 className을 넘겨준다. */}
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보6</p>
+            <RadioBtn btnStyle="btn_2" />
           </div>
         </div>
         <SaveBtn />
