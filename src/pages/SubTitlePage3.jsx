@@ -52,8 +52,9 @@ export default function Homepage() {
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보5</p>
-            <RadioBtn btnStyle="btn_1" />
+            <RadioBtn btnStyle="btn_1" isText={true} />
             {/* props로 className을 넘겨준다. */}
+            {/* 정보5에만 text를 표시해야하므로, true값을 갖는 props 하나를 넘겨준다. */}
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보6</p>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./RadioBtn.module.css";
 
-export default function RadioBtn({ btnStyle }) {
+export default function RadioBtn({ btnStyle, isText }) {
   const [selectedOpt, setSelectedOpt] = useState(1); //default 선택1에 checked
   const optionHandler = (opt) => {
     setSelectedOpt(opt);
@@ -34,7 +34,8 @@ export default function RadioBtn({ btnStyle }) {
           );
         })}
       </form>
-      {selectedOpt === 3 && (
+      {selectedOpt === 3 && isText && (
+        //opt.id가 3인 것과 isText가 true 값을 모두 충족시킬 경우에만, text가 보이도록 조건부랜더링을 한다.
         <p className={styles.opt_text}>*선택시 텍스트가 표시됩니다.</p>
       )}
     </div>

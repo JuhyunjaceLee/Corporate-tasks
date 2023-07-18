@@ -9,9 +9,11 @@ export default function Homepage() {
   const url = `https://api-jobtest.json2bot.chat`;
 
   useEffect(() => {
-    fetch(url)
+    fetch(url, { method: "GET" })
       .then((response) => response.json())
-      .then((data) => setData(data))
+      .then((data) => {
+        setData(data);
+      })
       .catch((error) => alert(error.message));
     // console.log(data);
   }, []);
@@ -44,23 +46,20 @@ export default function Homepage() {
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>날짜</p>
-            {/* <input
-              className={`${styles.info_contents} ${styles.info_input}`}
-              type="text"
-            ></input> */}
             <Calendar />
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보5</p>
-            <RadioBtn btnStyle="btn_1" />
+            <RadioBtn btnStyle="btn_1" isText={true} />
             {/* props로 className을 넘겨준다. */}
+            {/* 정보5에만 text를 표시해야하므로, true값을 갖는 props 하나를 넘겨준다. */}
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보6</p>
             <RadioBtn btnStyle="btn_2" />
           </div>
         </div>
-        <SaveBtn />
+        <SaveBtn data={data} />
       </div>
     </div>
   );
