@@ -13,9 +13,12 @@ export default function Homepage() {
       .then((response) => response.json())
       .then((data) => {
         setData(data);
+        console.log(data);
       })
-      .catch((error) => alert(error.message));
-    // console.log(data);
+      .catch((error) => {
+        alert(error.message);
+        console.log(error);
+      });
   }, []);
   return (
     <div className={styles.contents}>
@@ -64,3 +67,16 @@ export default function Homepage() {
     </div>
   );
 }
+
+// "scripts": {
+//   "start": "cross-env NODE_ENV=production PORT=8080 node server",
+//   "dev": "nodemon server",
+//   "test": "jest"
+// },
+
+// "scripts": {
+//   "start": "react-scripts start",
+//   "build": "react-scripts build",
+//   "test": "react-scripts test",
+//   "eject": "react-scripts eject"
+// },

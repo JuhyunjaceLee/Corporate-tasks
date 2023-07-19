@@ -13,12 +13,23 @@ export default function SaveBtn({ data }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(requestData),
+      //통신을 할땐, JSON형태로 보내야하기 때문에, data를 JSON String으로 변환해준다.
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+      .then((res) => {
+        if (res.status === 200) {
+          return res.json();
+          //서버에서 보내준 res를 Object 형태로 변환한다.
+        } else if (res.status === 400) {
+          throw new Error("Unexpected Http Status Code");
+          //400 에러일 때, "Unexpected Http Status Code" 메세지를 내보낸다.
+        } else if (res.status === 500) {
+          throw new Error("Unexpected Http Status Code");
+          //500 에러일 때, "Unexpected Http Status Code" 메세지를 내보낸다.
+        }
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.log("error", error);
+      });
   };
   return (
     <div>
