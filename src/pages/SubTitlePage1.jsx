@@ -28,13 +28,14 @@ export default function Homepage() {
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보1</p>
             <p className={styles.info_contents}>정보 내용</p>
+            {/* <p className={styles.info_contents}>{data.data.info1}</p> */}
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보2</p>
             <input
               className={`${styles.info_contents} ${styles.info_input}`}
               type="text"
-            ></input>
+            />
           </div>
           <div className={styles.info_wrap}>
             <p className={styles.info_title}>정보3</p>
@@ -67,16 +68,3 @@ export default function Homepage() {
     </div>
   );
 }
-
-// "scripts": {
-//   "start": "cross-env NODE_ENV=production PORT=8080 node server",
-//   "dev": "nodemon server",
-//   "test": "jest"
-// },
-
-// "scripts": {
-//   "start": "react-scripts start",
-//   "build": "react-scripts build",
-//   "test": "react-scripts test",
-//   "eject": "react-scripts eject"
-// },

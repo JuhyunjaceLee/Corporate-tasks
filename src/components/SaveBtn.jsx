@@ -28,7 +28,7 @@ export default function SaveBtn({ data }) {
         }
       })
       .catch((error) => {
-        console.log("error", error);
+        alert("error", error);
       });
   };
   return (
